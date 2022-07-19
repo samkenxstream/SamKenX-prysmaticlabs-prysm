@@ -8,7 +8,6 @@ import (
 	"github.com/prysmaticlabs/prysm/config/features"
 	fieldparams "github.com/prysmaticlabs/prysm/config/fieldparams"
 	"github.com/prysmaticlabs/prysm/crypto/hash"
-	"github.com/prysmaticlabs/prysm/crypto/hash/htr"
 	"github.com/prysmaticlabs/prysm/encoding/ssz"
 	ethpb "github.com/prysmaticlabs/prysm/proto/prysm/v1alpha1"
 )
@@ -98,7 +97,7 @@ func optimizedValidatorRoots(validators []*ethpb.Validator) ([][32]byte, error) 
 		// Overwrite input lists as we are hashing by level
 		// and only need the highest level to proceed.
 		outputLen := len(roots) / 2
-		htr.VectorizedSha256(roots, roots)
+		//htr.VectorizedSha256(roots, roots)
 		roots = roots[:outputLen]
 	}
 	return roots, nil

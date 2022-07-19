@@ -5,5 +5,4 @@ go_library(
     srcs = ["hashtree.go"],
     importpath = "github.com/prysmaticlabs/prysm/crypto/hash/htr",
     visibility = ["//visibility:public"],
-    deps = ["@com_github_prysmaticlabs_gohashtree//:go_default_library"],
 )

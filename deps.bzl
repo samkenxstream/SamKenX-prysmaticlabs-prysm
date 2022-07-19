@@ -3170,8 +3170,8 @@ def prysm_deps():
     go_repository(
         name = "com_github_prysmaticlabs_fastssz",
         importpath = "github.com/prysmaticlabs/fastssz",
-        sum = "h1:Y3PcvUrnneMWLuypZpwPz8P70/DQsz6KgV9JveKpyZs=",
-        version = "v0.0.0-20220628121656-93dfe28febab",
+        sum = "h1:hUvkhFcH1EjOn/gL1ldwf7GxBpiTD+ULAdUE6M9dOs4=",
+        version = "v0.0.0-20220719165930-057abd9e71df",
     )
 
     go_repository(
@@ -3183,8 +3183,8 @@ def prysm_deps():
     go_repository(
         name = "com_github_prysmaticlabs_gohashtree",
         importpath = "github.com/prysmaticlabs/gohashtree",
-        sum = "h1:920mmUNkTZ9zIWXjArGv6iU45b85gjUvq/4L1ZHWVYQ=",
-        version = "v0.0.1-alpha.0.20220303211031-f753e083138c",
+        sum = "h1:VvdBN86teGCG5con7gm5ISmnVOAobIsFyG9LfcONH+I=",
+        version = "v0.0.0-20220714111606-acbb2962fb48",
     )
 
     go_repository(

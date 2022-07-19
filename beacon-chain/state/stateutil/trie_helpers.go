@@ -8,7 +8,6 @@ import (
 	"github.com/prysmaticlabs/prysm/config/features"
 	"github.com/prysmaticlabs/prysm/container/trie"
 	"github.com/prysmaticlabs/prysm/crypto/hash"
-	"github.com/prysmaticlabs/prysm/crypto/hash/htr"
 	"github.com/prysmaticlabs/prysm/encoding/ssz"
 	"github.com/prysmaticlabs/prysm/math"
 )
@@ -76,7 +75,7 @@ func ReturnTrieLayerVariable(elements [][32]byte, length uint64) [][]*[32]byte {
 
 			layers[i+1] = make([]*[32]byte, layerLen/2)
 			newElems := make([][32]byte, layerLen/2)
-			htr.VectorizedSha256(elements, newElems)
+			//htr.VectorizedSha256(elements, newElems)
 			elements = newElems
 			for j := range elements {
 				layers[i+1][j] = &elements[j]
@@ -321,7 +320,7 @@ func MerkleizeTrieLeaves(layers [][][32]byte, hashLayer [][32]byte,
 		}
 		if features.Get().EnableVectorizedHTR {
 			newLayer := make([][32]byte, len(hashLayer)/2)
-			htr.VectorizedSha256(hashLayer, newLayer)
+			//htr.VectorizedSha256(hashLayer, newLayer)
 			hashLayer = newLayer
 		} else {
 			layer := make([][32]byte, len(hashLayer)/2)

@@ -3,7 +3,6 @@ package stateutil
 import (
 	"github.com/prysmaticlabs/prysm/config/features"
 	"github.com/prysmaticlabs/prysm/crypto/hash"
-	"github.com/prysmaticlabs/prysm/crypto/hash/htr"
 	"github.com/prysmaticlabs/prysm/encoding/ssz"
 	ethpb "github.com/prysmaticlabs/prysm/proto/prysm/v1alpha1"
 )
@@ -50,7 +49,7 @@ func merkleizePubkey(hasher ssz.HashFn, pubkey []byte) ([32]byte, error) {
 	var pubKeyRoot [32]byte
 	if features.Get().EnableVectorizedHTR {
 		outputChunk := make([][32]byte, 1)
-		htr.VectorizedSha256(chunks, outputChunk)
+		//htr.VectorizedSha256(chunks, outputChunk)
 		pubKeyRoot = outputChunk[0]
 	} else {
 		pubKeyRoot, err = ssz.BitwiseMerkleize(hasher, chunks, uint64(len(chunks)), uint64(len(chunks)))
