@@ -217,10 +217,10 @@ require (
 	go.uber.org/fx v1.18.2 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
-	golang.org/x/net v0.5.0 // indirect
+	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/oauth2 v0.0.0-20220223155221-ee480838109b // indirect
-	golang.org/x/term v0.4.0 // indirect
-	golang.org/x/text v0.6.0 // indirect
+	golang.org/x/term v0.5.0 // indirect
+	golang.org/x/text v0.7.0 // indirect
 	golang.org/x/time v0.0.0-20210220033141-f8bda1e9f3ba // indirect
 	gopkg.in/cenkalti/backoff.v1 v1.1.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
@@ -245,7 +245,7 @@ require (
 	github.com/peterh/liner v1.2.0 // indirect
 	github.com/prometheus/tsdb v0.10.0 // indirect
 	github.com/prysmaticlabs/gohashtree v0.0.2-alpha
-	golang.org/x/sys v0.4.0 // indirect
+	golang.org/x/sys v0.5.0 // indirect
 	google.golang.org/api v0.34.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	k8s.io/klog/v2 v2.80.0 // indirect
